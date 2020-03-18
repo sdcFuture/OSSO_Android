@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nested_navigation"
+            app:startDestination="@id/fragment_osso_dashboard">
+    <fragment
+        android:id="@+id/fragment_osso_dashboard"
+        android:name="com.futureelectronics.osso.OssoDashboardFragment"
+        android:label="osso_dashboard_fragment"
+        tools:layout="@layout/osso_dashboard_fragment">
+        <!--<action-->
+            <!--android:id="@+id/action_ossoDashboardFragment_to_ossoSettingsFragment"-->
+            <!--app:destination="@id/fragment_osso_settings"/>-->
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_osso_location"
+        android:name="com.futureelectronics.osso.OssoLocationFragment"
+        android:label="osso_location_fragment"
+        tools:layout="@layout/osso_location_fragment"/>
+
+    <fragment
+        android:id="@+id/fragment_osso_settings"
+        android:name="com.futureelectronics.osso.OssoSettingsFragment"
+        android:label="osso_settings_fragment"
+        tools:layout="@layout/osso_settings_fragment"/>
+
+</navigation>

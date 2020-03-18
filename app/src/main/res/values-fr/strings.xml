@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">OSSO</string>
+    <string name="osso_list_empty">La liste des appareils OSSO est vide</string>
+    <string name="scan_list_empty">Aucun appareil trouvé. Glisser vers le bas pour rafraîchir le balayage.</string>
+    <string name="cd_osso_name">Nom du OSSO</string>
+    <string name="cd_osso_address">Adresse du OSSO</string>
+    <string name="cd_osso_image">Image du OSSO</string>
+    <string name="cd_osso_rssi">Le signal du OSSO</string>
+    <string name="rssi_units">dB</string>
+
+    <string name="lbl_dashboard">Tableau de bord</string>
+    <string name="lbl_settings">Configuration</string>
+    <string name="lbl_location">Localisation</string>
+
+    <string name="main_frag_title">Mon OSSO</string>
+    <string name="scan_frag_title">Ajouter un OSSO</string>
+    <string name="temp_osso_details_frag_title">Détails du OSSO</string>
+    <string name="osso_details_frag_title">%s Détails</string>
+
+    <string name="menu_item_delete">Effacer</string>
+
+    <string name="title_temp_humidity">Température/Humidité</string>
+    <string name="lbl_temp_humidity_temp">Température</string>
+    <string name="lbl_temp_humidity_humidity">Humidité</string>
+    <string name="fmt_temp_humidity_temp">%.1f °C</string>
+    <string name="fmt_temp_humidity_humidity">%.1f %%</string>
+
+    <string name="title_ir_temp">Température IR</string>
+    <string name="lbl_ir_temp">Température IR</string>
+    <string name="fmt_ir_temp">%.1f °C</string>
+
+    <string name="title_battery">Batterie</string>
+    <string name="lbl_battery">Niveau</string>
+    <string name="val_battery_unknown">Inconnu</string>
+    <string name="val_battery_low">Bas</string>
+    <string name="val_battery_normal">Normal</string>
+
+    <string name="title_barks">Aboiements</string>
+    <string name="lbl_barks">Aboiements</string>
+
+    <string name="title_steps">Pas</string>
+    <string name="lbl_steps">Pas</string>
+
+    <string name="title_fw_version">Version du progiciel</string>
+    <string name="lbl_fw_version">Version du progiciel</string>
+
+    <string name="title_uv_index">Index UV</string>
+    <string name="lbl_uv_index">Index UV</string>
+    <string name="lbl_exposure_time">Temps d\'exposition</string>
+    <string name="fmt_exposure_time">%d M</string>
+
+    <string name="msg_connecting">Connexion en cours&#8230;</string>
+    <string name="msg_connected">Connecté!</string>
+    <string name="msg_disconnected">Non connecté!</string>
+    <string name="msg_action_reconnect">Réessayez</string>
+
+    <string name="msg_snackbar_err">Erreur: %s</string>
+</resources>

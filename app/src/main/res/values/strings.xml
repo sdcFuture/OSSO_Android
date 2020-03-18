@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">OSSO</string>
+    <string name="osso_list_empty">Your OSSO device list is empty</string>
+    <string name="scan_list_empty">No devices found. Swipe down to refresh the scan.</string>
+    <string name="cd_osso_name">Name of OSSO</string>
+    <string name="cd_osso_address">OSSO Address</string>
+    <string name="cd_osso_image">Image of OSSO</string>
+    <string name="cd_osso_rssi">Signal of OSSO</string>
+    <string name="rssi_units">dB</string>
+
+    <string name="lbl_dashboard">Dashboard</string>
+    <string name="lbl_settings">Settings</string>
+    <string name="lbl_location">Location</string>
+
+    <string name="main_frag_title">My OSSOs</string>
+    <string name="scan_frag_title">Add OSSO</string>
+    <string name="temp_osso_details_frag_title">OSSO Details</string>
+    <string name="osso_details_frag_title">%s Details</string>
+
+    <string name="menu_item_delete">Delete</string>
+
+    <string name="title_temp_humidity">Temperature/Humidity</string>
+    <string name="lbl_temp_humidity_temp">Temperature</string>
+    <string name="lbl_temp_humidity_humidity">Humidity</string>
+    <string name="fmt_temp_humidity_temp">%.1f °C</string>
+    <string name="fmt_temp_humidity_humidity">%.1f %%</string>
+
+    <string name="title_ir_temp">IR Temperature</string>
+    <string name="lbl_ir_temp">IR Temperature</string>
+    <string name="fmt_ir_temp">%.1f °C</string>
+
+    <string name="title_battery">Battery</string>
+    <string name="lbl_battery">Level</string>
+    <string name="val_battery_unknown">Unknown</string>
+    <string name="val_battery_low">Low</string>
+    <string name="val_battery_normal">Normal</string>
+
+    <string name="title_barks">Barks</string>
+    <string name="lbl_barks">Barks</string>
+
+    <string name="title_steps">Steps</string>
+    <string name="lbl_steps">Steps</string>
+
+    <string name="title_fw_version">Firmware Version</string>
+    <string name="lbl_fw_version">Firmware Version</string>
+
+    <string name="title_uv_index">UV Index</string>
+    <string name="lbl_uv_index">UV Index</string>
+    <string name="lbl_exposure_time">Exposure Time</string>
+    <string name="fmt_exposure_time">%d M</string>
+
+    <string name="msg_connecting">Connecting&#8230;</string>
+    <string name="msg_connected">Connected!</string>
+    <string name="msg_disconnected">Disconnected!</string>
+    <string name="msg_action_reconnect">Retry</string>
+
+    <string name="msg_snackbar_err">Error: %s</string>
+</resources>

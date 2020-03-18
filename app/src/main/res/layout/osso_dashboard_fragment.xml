@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".OssoDashboardFragment">
+    <data>
+        <!--<import type="com.futureelectronics.osso.BindingAdapters"/>-->
+        <!--<import type="com.futureelectronics.osso.R"/>-->
+        <variable name="osso"
+                  type="com.futureelectronics.osso.data.Osso"/>
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/item_horizontal_margin"
+            android:layout_marginEnd="@dimen/item_horizontal_margin">
+
+            <com.futureelectronics.osso.OssoDataView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dv_temp_humidity"
+                app:layout_constraintTop_toTopOf="parent"
+                app:dataTitle="@string/title_temp_humidity"
+                app:dataImage="@drawable/temp_humidity"
+                app:dataLabel1="@string/lbl_temp_humidity_temp"
+                app:dataValue1="@{@string/fmt_temp_humidity_temp(osso.temperature)}"
+                app:dataLabel2="@string/lbl_temp_humidity_humidity"
+                app:dataValue2="@{@string/fmt_temp_humidity_humidity(osso.humidity)}">
+
+            </com.futureelectronics.osso.OssoDataView>
+
+            <com.futureelectronics.osso.OssoDataView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dv_ir_temp"
+                app:layout_constraintTop_toBottomOf="@id/dv_temp_humidity"
+                app:dataTitle="@string/title_ir_temp"
+                app:dataImage="@drawable/temperature"
+                app:dataLabel1="@string/lbl_ir_temp"
+                app:dataValue1="@{@string/fmt_ir_temp(osso.ir_temperature)}"/>
+
+            <!--<com.futureelectronics.osso.OssoDataView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/dv_battery"-->
+            <!--app:layout_constraintTop_toBottomOf="@id/dv_ir_temp"-->
+            <!--app:dataTitle="@string/title_battery"-->
+            <!--app:dataImage="@drawable/battery"-->
+            <!--app:dataLabel1="@string/lbl_battery"-->
+            <!--app:dataValue1="@{osso.battery == 0 ? @string/val_battery_normal : @string/val_battery_low}"-->
+            <!--app:value1Color="@{osso.battery == 0 ? R.color.colorOssoValGood : R.color.colorOssoValBad}"-->
+            <!--/>-->
+
+            <com.futureelectronics.osso.OssoDataView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dv_battery"
+                app:layout_constraintTop_toBottomOf="@id/dv_ir_temp"
+                app:dataTitle="@string/title_battery"
+                app:dataImage="@drawable/battery"
+                app:dataLabel1="@string/lbl_battery"
+                app:dataValue1="@{osso.battery == 0 ? @string/val_battery_normal : @string/val_battery_low}"
+                app:value1Color="@{osso.battery == 0 ? @color/colorOssoValGood : @color/colorOssoValBad}"
+                />
+            <!--setBatteryState="@{osso.battery}"-->
+
+            <com.futureelectronics.osso.OssoDataView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dv_uv_index"
+                app:layout_constraintTop_toBottomOf="@id/dv_battery"
+                app:dataTitle="@string/title_uv_index"
+                app:dataImage="@drawable/uv_index"
+                app:dataLabel1="@string/lbl_uv_index"
+                app:dataValue1="@{Integer.toString(osso.uv_index)}"
+                setUvIndexColor="@{osso.uv_index}"
+                app:dataLabel2="@string/lbl_exposure_time"
+                app:dataValue2="@{@string/fmt_exposure_time(osso.exposure_time)}"/>
+            <!--app:value1Color="@{BindingAdapters.convertUvIndexToColor(osso.uv_index)}"-->
+
+            <com.futureelectronics.osso.OssoDataView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dv_barks"
+                app:layout_constraintTop_toBottomOf="@id/dv_uv_index"
+                app:dataTitle="@string/title_barks"
+                app:dataImage="@drawable/dog_barking"
+                app:dataLabel1="@string/lbl_barks"
+                app:dataValue1="@{Integer.toString(osso.barks)}"/>
+
+            <com.futureelectronics.osso.OssoDataView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dv_steps"
+                app:layout_constraintTop_toBottomOf="@id/dv_barks"
+                app:dataTitle="@string/title_steps"
+                app:dataImage="@drawable/paw_print"
+                app:dataLabel1="@string/lbl_steps"
+                app:dataValue1="@{Integer.toString(osso.steps)}"/>
+
+            <com.futureelectronics.osso.OssoDataView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dv_fw"
+                app:layout_constraintTop_toBottomOf="@id/dv_steps"
+                app:dataTitle="@string/title_fw_version"
+                app:dataLabel1="@string/lbl_fw_version"
+                app:dataValue1="@{osso.fw}"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</layout>

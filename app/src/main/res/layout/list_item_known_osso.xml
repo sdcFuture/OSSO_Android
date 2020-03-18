@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="osso"
+                  type="com.futureelectronics.osso.data.Osso"/>
+        <variable name="callback"
+                  type="com.futureelectronics.osso.OssoClickCallback"/>
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() ->  callback.onClick(osso)}"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/item_horizontal_margin"
+        android:layout_marginEnd="@dimen/item_horizontal_margin"
+        app:cardUseCompatPadding="true">
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/item_horizontal_margin"
+            android:layout_marginEnd="@dimen/item_horizontal_margin">
+
+            <ImageView
+                android:id="@+id/pet_image"
+                android:layout_width="@dimen/osso_item_image_width"
+                android:layout_height="@dimen/osso_item_image_height"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_pets_black_24dp"
+                android:contentDescription="@string/cd_osso_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/pet_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{osso.petName}"
+                android:contentDescription="@string/cd_osso_name"
+                android:textSize="@dimen/txt_detail_large"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/item_vertical_margin"
+                app:layout_constraintStart_toEndOf="@id/pet_image"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <TextView
+                android:id="@+id/osso_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{osso.address}"
+                android:contentDescription="@string/cd_osso_address"
+                android:textSize="@dimen/txt_detail_norm"
+                android:maxLines="1"
+                android:layout_marginBottom="@dimen/item_vertical_margin"
+                app:layout_constraintStart_toEndOf="@id/pet_image"
+                app:layout_constraintTop_toBottomOf="@id/pet_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <!--<LinearLayout android:layout_width="wrap_content"-->
+                          <!--android:layout_height="wrap_content"-->
+                          <!--android:orientation="vertical"-->
+                          <!--android:layout_marginStart="8dp"-->
+                          <!--app:layout_constraintStart_toEndOf="@id/pet_image"-->
+                          <!--app:layout_constraintTop_toTopOf="parent"-->
+                          <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                          <!--android:layout_marginTop="@dimen/item_vertical_margin"-->
+                          <!--android:layout_marginBottom="@dimen/item_vertical_margin">-->
+
+                <!---->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/osso_address"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textSize="@dimen/txt_detail_norm"-->
+                    <!--android:maxLines="1"-->
+                    <!--android:text="@{osso.address}"-->
+                    <!--android:contentDescription="@string/cd_osso_address"/>-->
+
+            <!--</LinearLayout>-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".OssoSettingsFragment">
+    <data>
+        <import type="android.view.View"/>
+        <variable name="osso"
+                  type="com.futureelectronics.osso.data.Osso"/>
+        <variable name="petNameChangedCallback"
+                  type="com.futureelectronics.osso.OssoSettingsFragment.OssoPetNameChangedCallback"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/item_horizontal_margin"
+        android:layout_marginEnd="@dimen/item_horizontal_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Settings"/>
+
+        <!--<EditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/osso_pet_name"-->
+            <!--clearOnFocusAndDispatch="@{() -> petNameChangedCallback.onPetNameChanged()}"-->
+            <!--android:text="@{osso.petName}"/>-->
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ossoPetName"
+            clearOnFocusAndDispatch="@{() -> petNameChangedCallback.onPetNameChanged(ossoPetName.getText())}"
+            android:text="@{osso.petName}"/>
+
+    </LinearLayout>
+</layout>

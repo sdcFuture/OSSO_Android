@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#4CAE70</color>
+
+    <color name="fab_tint">#FFFFFF</color>
+
+    <color name="colorOssoValGood">#289500</color>
+    <color name="colorOssoValBad">#d81700</color>
+    <color name="colorOssoValWarning">#f7e401</color>
+
+    <color name="colorUvIndexGood">@color/colorOssoValGood</color>
+    <color name="colorUvIndexOk">@color/colorOssoValWarning</color>
+    <color name="colorUvIndexHigh">#f87b01</color>
+    <color name="colorUvIndexVeryHigh">@color/colorOssoValBad</color>
+    <color name="colorUvIndexExtreme">#6b49c8</color>
+</resources>

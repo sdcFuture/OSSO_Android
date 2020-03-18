@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/fragment_osso_dashboard"
+        android:title="@string/lbl_dashboard"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        />
+    <item
+        android:id="@id/fragment_osso_location"
+        android:title="@string/lbl_location"
+        android:icon="@drawable/ic_location_on_black_24dp"
+        />
+    <item
+        android:id="@id/fragment_osso_settings"
+        android:title="@string/lbl_settings"
+        android:icon="@drawable/ic_settings_black_24dp"
+        />
+</menu>
